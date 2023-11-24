@@ -1,0 +1,135 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #000; 
+    color: #fff; /* White text color */
+}
+
+header {
+    padding: 20px 0;
+    background: #000;
+}
+
+header h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+    overflow: auto;
+    padding: 0 20px;
+}
+
+nav {
+    float: right;
+    font-size: 16px;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    overflow: hidden; 
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px; 
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* Clearfix for the container */
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Styling for active or hover states */
+nav ul li a:hover,
+nav ul li a.active {
+    color: #00FF00; /* Highlight color */
+}
+
+
+/* Work Section */
+/* Work container styles */
+.work-container {
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.work-header {
+    text-align: left;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+}
+
+.work-header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.work-description {
+    font-size: 1em;
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.work-meta {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    row-gap: 10px;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+.work-meta div {
+    margin: 5px 0;
+}
+
+.work-main {
+    padding: 0 50px 50px 50px;
+}
+
+.work-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.work-section p {
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* Clearfix for floated elements */
+.container::after,
+nav::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer styles if needed */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
