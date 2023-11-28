@@ -7,3 +7,25 @@ function toggleExperienceDetail(element) {
         experienceEntry.classList.add('expanded');
     }
 }
+$(document).ready(function () {
+    // Fetch the weather for Vancouver
+    var apiKey = "20d9814bf4msh84563c01c908c51p145503jsn624eb7491784"; 
+    var apiUrl = "https://weatherapi-com.p.rapidapi.com/current.json?q=V5H";
+
+    fetch(apiUrl, {
+      method: "GET",
+      headers: {
+        "X-RapidAPI-Key": apiKey,
+        "X-RapidAPI-Host": "weatherapi-com.p.rapidapi.com",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        // Set the weather and temperature in the footer
+        document.getElementById("weather").textContent = data.current.condition.text + ", " + data.current.temp_c + "°C";
+      })
+      .catch((error) => {
+        // Show an error message if the weather could not be fetched
+        document.getElementById("weather").textContent = "Error fetching weather.";
+      });
+});
