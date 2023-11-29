@@ -64,6 +64,30 @@ nav::after {
     display: table;
     clear: both;
 }
+/* Home Section */
+.full-page-container {
+    height: 100vh; /* 100% of the viewport height */
+    width: 100vw; /* 100% of the viewport width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    color: white; 
+    background-color: black; 
+}
+
+.content h1 {
+    font-size: 4em; 
+    margin: 0;
+    padding: 0;
+}
+
+.intro-text {
+    font-size: 1.5em; 
+    max-width: 800px; 
+    margin-top: 20px; 
+}
 
 /* CAse Studies */
 .section-container {
