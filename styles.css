@@ -1,24 +1,34 @@
+@font-face {
+    font-family: tomatogrotesk;
+    src: url("Tomato_Grotesk/TomatoGrotesk-Medium.otf");
+}
+
+@font-face {
+    font-family: tomatogrotesklight;
+    src: url("Tomato_Grotesk/TomatoGrotesk-Light.otf");
+}
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'tomatogrotesk', sans-serif;
     margin: 0;
     padding: 0;
-    background: #000; 
-    color: #fff; /* White text color */
+    background: #121212; 
+    color: #f3f3f3; /* White text color */
     line-height: 1.6;
 }
 
 header {
     padding: 20px 0;
-    background: #000;
+    background: #121212;
 }
 
 #branding h1, header h1 {
     margin: 0;
-    color: #fff;
+    color: #f3f3f3;
     font-size: 24px;
     text-transform: uppercase;
 }
@@ -41,7 +51,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #f3f3f3;
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -74,7 +84,7 @@ nav::after {
     align-items: center; 
     text-align: center;
     color: white; 
-    background-color: black; 
+    background-color: #121212; 
 }
 
 .content h1 {
@@ -106,7 +116,7 @@ nav::after {
 }
 
 .section-title {
-    color: #fff;
+    color: #f3f3f3;
     font-size: 2em;
     text-transform: uppercase;
     margin-bottom: 20px; 
@@ -116,7 +126,7 @@ nav::after {
 
 #experience, #case-studies {
     background-color: #000;
-    color: #fff;
+    color: #f3f3f3;
     text-align: left;
 }
 
@@ -145,7 +155,7 @@ nav::after {
 }
 
 
-/* Responsive behavior for case studies */
+/* Responsive case studies */
 @media only screen and (max-width: 600px) {
     .case-study-grid {
         grid-template-columns: 1fr; 
@@ -160,14 +170,14 @@ nav::after {
 
 /* Experience Section */
 .section-title {
-    color: #fff; 
+    color: #f3f3f3; 
     font-size: 2em; 
     text-transform: uppercase; 
 }
 
 #experience {
     background-color: #000; 
-    color: #fff;
+    color: #f3f3f3;
     padding: 50px 20px;
     text-align: left;
 }
@@ -228,10 +238,10 @@ nav::after {
     }
 }
 
-/* Footer styles if needed */
+
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #121212;
+    color: #f3f3f3;
     text-align: center;
     padding: 10px 0;
     position: relative;
@@ -241,57 +251,154 @@ footer {
 
 
 /* Work Section */
-/* Work container styles */
 .work-container {
     max-width: 1200px;
-    margin: 50px auto;
+    margin: 0 auto; /* Center the container */
+    color: #f3f3f3;
+    background-color: #121212; 
+    padding: 2rem; /* Responsive padding */
 }
 
+/* Header within Work Container */
 .work-header {
-    text-align: left;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #444; /* Subtle border color */
+    padding-bottom: 2rem; /* Responsive padding */
 }
 
 .work-header h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
+    font-size: 3rem; /* Responsive font size */
+    margin-bottom: 1rem;
 }
 
 .work-description {
-    font-size: 1em;
-    color: #aaa;
-    margin-bottom: 20px;
+    font-size: 1.6rem; /* Slightly larger than base font size for emphasis */
+    color: #aaa; /* Light grey color for description */
+    margin-bottom: 2rem;
 }
 
+/* Meta Information */
 .work-meta {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 20px;
-    row-gap: 10px;
-    font-size: 0.9em;
-    margin-bottom: 20px;
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  */
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem; /* Grid gap for spacing */
+    margin-bottom: 2rem; /* Bottom margin */
+    font-size: 1rem; /* Slightly larger font size */
 }
 
 .work-meta div {
-    margin: 5px 0;
+    margin-bottom: 0.5rem; /* Margin for meta items */
 }
 
+/* Main content area */
 .work-main {
-    padding: 0 50px 50px 50px;
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 2rem; /* Grid gap for spacing */
+    padding: 2rem 0; /* Vertical padding */
+}
+
+.work-section {
+    margin-bottom: 2rem; /* Spacing between sections */
 }
 
 .work-section h2 {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-    color: #fff;
+    font-size: 2.4rem; /* Large font size for headings */
+    margin-bottom: 1rem; /* Spacing below headings */
 }
 
 .work-section p {
-    color: #ccc;
-    line-height: 1.6;
-    margin-bottom: 40px;
+    font-size: 1.6rem; /* Paragraph font size */
+    color: #ccc; /* Lighter color for paragraph text */
 }
+
+/* Image placeholder styles */
+.image-placeholder {
+    background-color: #333; /* Placeholder color */
+    width: 100%; /* Full width */
+    height: 30rem; 
+    margin-bottom: 2rem; /* Spacing below the image placeholder */
+}
+/* Accordion */
+/* Style the buttons that are used to open the accordion content */
+.accordion-button {
+    background-color: #121212; /* Set background color to black */
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    border-top: 1px solid #333; /* Top border line */
+    border-bottom: 1px solid #333; /* Bottom border line */
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    position: relative; /* Needed for absolute positioning of the pseudo-element */
+}
+
+
+.accordion-button.active, .accordion-button:hover {
+    background-color: #222;
+}
+
+
+.accordion-content {
+    padding: 0 18px;
+    background-color: #000; /* Set background color to black */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    color: white;
+    border-bottom: 1px solid #333; /* Bottom border line */
+}
+.accordion-button::after {
+    content: '\25BC'; /* Default: Downward arrow */
+    font-size: 13px;
+    color: white;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.2s ease-out;
+}
+
+/* Rotate arrow icon when the accordion is active */
+.accordion-button.active::after {
+    transform: translateY(-50%) rotate(180deg); /* Rotate arrow for active state */
+}
+
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #222; /* Dark background for the footer */
+    color: #aaa; /* Light grey color for the footer text */
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    .work-header h1 {
+        font-size: 2.5rem; 
+    }
+
+    .work-description {
+        font-size: 1.4rem; 
+    }
+
+    .work-meta {
+        grid-template-columns: 1fr; 
+    }
+
+    .work-section h2 {
+        font-size: 2rem;
+    }
+
+    .work-section p {
+        font-size: 1.4rem; 
+    }
+}
+
 
 /* Clearfix for floated elements */
 .container::after,
@@ -304,7 +411,7 @@ nav::after {
 /* Footer styles if needed */
 footer {
     background-color: #333;
-    color: #fff;
+    color: #f3f3f3;
     text-align: center;
     padding: 10px 0;
     position: relative;
