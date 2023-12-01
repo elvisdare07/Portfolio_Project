@@ -13,13 +13,18 @@
             <div id="branding">
                 <h1>ELVISHSIAO</h1>
             </div>
+            <div class="hamburger-menu" onclick="toggleHamburgerMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
             <nav>
-                <ul>
+                <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li> 
-                    <li><a href="experience.html">Experience</a></li> 
-                    <li class="current"><a href="work.html">Case Studies</a></li> 
-                    <li><a href="contact.html">Get In Touch</a></li> 
+                    <li><a href="#about">About</a></li> 
+                    <li><a href="#experience">Experience</a></li> 
+                    <li><a href="#case-studies">Case Studies</a></li> 
+                    <li><a href="#get-in-touch">Get In Touch</a></li> 
                 </ul>
             </nav>
         </div>
@@ -35,11 +40,13 @@
                 <div><strong>DURATION:</strong> August 2023 to November 2023</div>
                 <div><strong>TEAM:</strong> Elvis Hsiao, Abtine Monavarri (Chief of Product) </div>
                 <div><strong>TOOLS:</strong> Figma, Miro</div>
+                <div><strong>PLATFORM:</strong> Desktop, Mobile</div>
                 <div><strong>STATUS:</strong> Shipped & Live</div>
             </div>
-            <div class="image-placeholder">
-                <!-- Placeholder for the image -->
+            <div class="figma-embed-container">
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FZWnLeY0RknL4WbGDg7AEAB%2FLandlord-V2.N%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D1-2993%26viewport%3D1206%252C851%252C0.03%26t%3DTjZ1gPrmu3FfLdyv-1%26scaling%3Dcontain%26starting-point-node-id%3D1%253A2993%26mode%3Ddesign" allowfullscreen></iframe>
             </div>
+            
         </header>
 
         <main class="work-main">
@@ -47,88 +54,15 @@
                 <h2>About The Project</h2>
                 <p>Chexy is a platform that currently allows users to pay rent with their credit cards and receive cashback rewards for making rent payments. In addition, the platform allows users to build credit without having to take on additional debt when rent payments usually take up the majority of pay cheques.</p>
             <br>
-            <p>For this specific version, we're looking to improve and build out the landlord side of the platform with the following features. </p>
+            <p>For this specific version, we're looking to improve and build out the landlord side of the platform. Our main business goals would be to encourage landlords to manage their properties and payments through the Chexy platform. However, we need to provide enough value propositiion to give landlords a reason to modify their current process.</p>
             </div>
-            <div class="accordion-container">
-                <div class="accordion-item">
-                    <button class="accordion-button">User Login</button>
-                    <div class="accordion-content">
-                        <p>The feature allows the users to login and logout using single sign on.</p>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <button class="accordion-button">Account Recovery</button>
-                    <div class="accordion-content">
-                        <p>The feature allows users to recover their account using some form of 2 factor authentication.</p>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <button class="accordion-button">Onboarding</button>
-                    <div class="accordion-content">
-                        <p>Onboarding process allows landlord seamlessly and intuitively input all required documents and necessary information required by the government.</p>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <button class="accordion-button">Manage Pending Action</button>
-                    <div class="accordion-content">
-                        <p>This feature lives inside the dashboard, which also allows landlords to be notified of any action items that requires their attention.</p>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <button class="accordion-button">Create Lease</button>
-                    <div class="accordion-content">
-                        <p>This feature lives inside the dashboard and part of the onboarding, which allows the landlord to create a lease agreement and invite their tenants to Chexy.</p>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <button class="accordion-button">Add Properties</button>
-                    <div class="accordion-content">
-                        <p>This feature lives inside the dashboard and part of the onboarding which allows the landlord to add all their properties. By adding properties, the landlord can directly create lease agreements for each of their properties and manage their properties as well as generate invoices for tax season.</p>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <button class="accordion-button">Invite & Manage Tenants</button>
-                    <div class="accordion-content">
-                        <p>This feature allows landlords to directly invite their tenants onto the Chexy platform. This will enable landlord to maintain direct communication with their tenants as well as track payments, renew lease, split rent amongst tenants, and track tenants' payment history.</p>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <button class="accordion-button">Edit Rental Terms</button>
-                    <div class="accordion-content">
-                        <p>This feature allows landlords to directly edit rental terms of each property which can come in handy when there are rent increases or rent term extensions.</p>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <button class="accordion-button">View Invoices</button>
-                    <div class="accordion-content">
-                        <p>This feature is directly accessible from the dashboard which allows landlords to generate individual or batch invoices for each rental payment and tax forms.</p>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <button class="accordion-button">View Properties</button>
-                    <div class="accordion-content">
-                        <p>This feature lives in the dashboard, which allows landlords to view each of their properties and their units under the same address. </p>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <button class="accordion-button">Dashboard</button>
-                    <div class="accordion-content">
-                        <p>The dashboard provides a high level summary of all important aspects of housing rental (finances, lease agreements, vacancy rate, invoices)</p>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <button class="accordion-button">Payment Profile</button>
-                    <div class="accordion-content">
-                        <p>This feature lives in the dashboard, where landlords are able to manage and make changes to their payment methods.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="image-placeholder">
-                <!-- Placeholder for the image -->
+            <div class="work-section">
+                <h2>My Contributions</h2>
+                <p>I was the only product designer actively working on this release and I worked closely with the Chief of Product to make sure my designs meet requirements. The Chief of Product primarly fed me information such as research findings and user stories. </p>
             </div>
             <div class="work-section">
                 <h2>Design Focus</h2>
-                <p>Create a landlord centric platform that allows landlords to seamlessly manage their properties and collect payments. </p>
+                <p>How might we create a landlord centric platform that allows landlords to seamlessly manage their properties and collect payments?  </p>
             </div>
             <div class="work-section">
                 <h2>Target Audience</h2>
@@ -168,7 +102,30 @@
                     <button class="accordion-button">04. Design Userflow & Wireframe</button>
                     <div class="accordion-content">
                         <p>After we validated our assumptions and finalized our features in order of priority, we started the design process of initial wireframes and userflows.</p>
+                        <div class="image-placeholder">
+                            <img src="Userflow/v2.n Landlord workflows - Landlord-initiated onboarding - v2.0 decoupled onboarding.jpg" alt="Sign up page with single sign on option with google">
+                        </div>
+                        <div class="image-placeholder">
+                            <img src="Userflow/v2.n Landlord workflows - Add rent details - v2.0.jpg" alt="Sign up page with single sign on option with google">
+                        </div>
+                        <div class="image-placeholder">
+                            <img src="Userflow/v2.n Landlord workflows - Adding deposits in rent details.jpg" alt="Sign up page with single sign on option with google">
+                        </div>
+                        <div class="image-placeholder">
+                            <img src="Userflow/v2.n Landlord workflows - Lease edits - landlord triggered.jpg" alt="Sign up page with single sign on option with google">
+                        </div>
+                        <div class="image-placeholder">
+                            <img src="Userflow/v2.n Landlord workflows - Property creation - v2.0 (single household manual upload).jpg" alt="Sign up page with single sign on option with google">
+                        </div>
+                        <div class="image-placeholder">
+                            <img src="Features/Individual + sole proprietor.png" alt="Sign up page with single sign on option with google">
+                        </div>
+                        <div class="image-placeholder">
+                            <img src="Features/Corporate landlord onboarding.png" alt="Sign up page with single sign on option with google">
+                        </div>
+                        
                     </div>
+                    
                 </div>
                 <div class="accordion-item">
                     <button class="accordion-button">05. Validate Prototype with Landlords</button>
@@ -215,40 +172,185 @@
                         <p>Institutional landlords have property managers to submit required documents.</p>
                     </div>
                 </div>
+                <div class="work-section">
+                    <h2>The Features </h2>
+                    <p>Based on our interviews and usertests, we narrowed down our list of features that have a balance of core and nice to have features. (Click to expand on individual features.)</p>
+                    <div class="accordion-container">
+                        <div class="accordion-item">
+                            <button class="accordion-button">User Login</button>
+                            <div class="accordion-content">
+                                <p>The feature allows the users to login and logout using single sign on.</p>
+                                <div class="image-placeholder">
+                                    <img src="Features/Create auth  (corporate).png" alt="Sign up page with single sign on option with google">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-button">Onboarding</button>
+                            <div class="accordion-content">
+                                <p>Onboarding process allows landlord seamlessly and intuitively input all required documents and necessary information required by the government.</p>
+                                <div class="image-placeholder">
+                                    <img src="Features/Prompt number of units (individuals).png" alt="Page with fields prompting user to put in number of units">
+                                </div>
+                                <div class="image-placeholder">
+                                    <img src="Features/Add first property - state 1 (enter address).png" alt="Sign up page with single sign on option with google">
+                                </div>
+                                <div class="image-placeholder">
+                                    <img src="Features/Add first property - state 2 (complete address multi).png" alt="Sign up page with single sign on option with google">
+                                </div>
+                                <div class="image-placeholder">
+                                    <img src="Features/Add first property - state 2 (complete address single).png" alt="Sign up page with single sign on option with google">
+                                </div>
+                                <div class="image-placeholder">
+                                    <img src="Features/Step 1 of 5 - select a unit.png" alt="Sign up page with single sign on option with google">
+                                </div>
+                                <div class="image-placeholder">
+                                    <img src="Features/Step 2 of 5 - Enter lease terms (auto-nav here for first unit).png" alt="Sign up page with single sign on option with google">
+                                </div>
+                                <div class="image-placeholder">
+                                    <img src="Features/Step 3 of 5 - upload lease document.png" alt="Sign up page with single sign on option with google">
+                                </div>
+                                <div class="image-placeholder">
+                                    <img src="Features/Step 4 of 5 - tenant information.png" alt="Sign up page with single sign on option with google">
+                                </div>
+                                <div class="image-placeholder">
+                                    <img src="Features/Step 5 of 5 - Review and invite tenant.png" alt="Sign up page with single sign on option with google">
+                                </div>
+                                <div class="image-placeholder">
+                                    <img src="Features/Set up payments before inviting tenant.png" alt="Sign up page with single sign on option with google">
+                                </div>
+                                <div class="image-placeholder">
+                                    <img src="Features/Invitation to tenant success.png" alt="Sign up page with single sign on option with google">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-button">Create Lease</button>
+                            <div class="accordion-content">
+                                <p>This feature lives inside the dashboard and part of the onboarding, which allows the landlord to create a lease agreement and invite their tenants to Chexy.</p>
+                                <div class="image-placeholder">
+                                    <img src="Features/Alerts - Action Required.png" alt="Sign up page with single sign on option with google">
+                                </div>
+                                <div class="image-placeholder">
+                                    <img src="Features/Alerts - No Action.png" alt="Sign up page with single sign on option with google">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-button">Add Properties</button>
+                            <div class="accordion-content">
+                                <p>This feature lives inside the dashboard and part of the onboarding which allows the landlord to add all their properties. By adding properties, the landlord can directly create lease agreements for each of their properties and manage their properties as well as generate invoices for tax season.</p>
+                                <div class="image-placeholder">
+                                    <img src="Features/Dashboard - active view.png" alt="Sign up page with single sign on option with google">
+                                </div>
+                                <div class="image-placeholder">
+                                    <img src="Features/Add new unit - multi.png" alt="Sign up page with single sign on option with google">
+                                </div>
+                                <div class="image-placeholder">
+                                    <img src="Features/Add new unit.png" alt="Sign up page with single sign on option with google">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-button">Invite & Manage Tenants</button>
+                            <div class="accordion-content">
+                                <p>This feature allows landlords to directly invite their tenants onto the Chexy platform. This will enable landlord to maintain direct communication with their tenants as well as track payments, renew lease, split rent amongst tenants, and track tenants' payment history.</p>
+                                <div class="image-placeholder">
+                                    <img src="Features/Invitation to tenant success.png" alt="Sign up page with single sign on option with google">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-button">Edit Rental Terms</button>
+                            <div class="accordion-content">
+                                <p>This feature allows landlords to directly edit rental terms of each property which can come in handy when there are rent increases or rent term extensions.</p>
+                                <div class="image-placeholder">
+                                    <img src="Features/View units - top view.png" alt="Sign up page with single sign on option with google">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-button">View Invoices</button>
+                            <div class="accordion-content">
+                                <p>This feature is directly accessible from the dashboard which allows landlords to generate individual or batch invoices for each rental payment and tax forms.</p>
+                                <div class="image-placeholder">
+                                    <img src="Features/View invoice- In Progress.png" alt="Sign up page with single sign on option with google">
+                                </div>
+                                <div class="image-placeholder">
+                                    <img src="Features/View invoice- Completed.png" alt="Sign up page with single sign on option with google">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-button">View Properties</button>
+                            <div class="accordion-content">
+                                <p>This feature lives in the My properties tab, which allows landlords to view each of their properties and their units under the same address. </p>
+                                <div class="image-placeholder">
+                                    <img src="Features/View units - top view.png" alt="Sign up page with single sign on option with google">
+                                </div>
+                                <div class="image-placeholder">
+                                    <img src="Features/Property view.png" alt="Sign up page with single sign on option with google">
+                                </div>
+                                <div class="image-placeholder">
+                                    <img src="Features/Unit View - No Past Payments.png" alt="Sign up page with single sign on option with google">
+                                </div>
+                                <div class="image-placeholder">
+                                    <img src="Features/Unit View - With Past Payment.png" alt="Sign up page with single sign on option with google">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-button">Dashboard</button>
+                            <div class="accordion-content">
+                                <p>The dashboard provides a high level summary of all important aspects of housing rental (finances, lease agreements, vacancy rate, invoices)</p>
+                                <div class="image-placeholder">
+                                    <img src="Features/Dashboard - active view with alert.png" alt="Sign up page with single sign on option with google">
+                                </div>
+                                <div class="image-placeholder">
+                                    <img src="Features/Dashboard - active view.png" alt="Sign up page with single sign on option with google">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-button">Payment Profile</button>
+                            <div class="accordion-content">
+                                <p>This feature lives in the dashboard, where landlords are able to manage and make changes to their payment methods.</p>
+                                <div class="image-placeholder">
+                                    <img src="Features/Profile & Settings - Business Profile.png" alt="Sign up page with single sign on option with google">
+                                </div>
+                                <div class="image-placeholder">
+                                    <img src="Features/Profile & Settings - Business Profile 1.png" alt="Sign up page with single sign on option with google">
+                                </div>
+                                <div class="image-placeholder">
+                                    <img src="Features/Profile & Settings - Business Profile 2.png" alt="Sign up page with single sign on option with google">
+                                </div>
+                                <div class="image-placeholder">
+                                    <img src="Features/Profile & Settings - Business Profile 3.png" alt="Sign up page with single sign on option with google">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-section">
+                    <h2>Reflection</h2>
+                    <p>The scope of this project was quite large to begin with. But after settings our biases and assumptions aside, we were able to narrow down the scope based on which assumptions we validated. </p>
+                    <p>With the number of features we originally proposed, nearly half of those features have been removed. An important lesson that I learned is that we cannot design for every user and every edgecase. The main challenge we faced was with goals and needs of our different target audiences. We slowly realized that there are different skill levels when it comes to real estate investing regardless of sole proprieter or corporations. Some smaller landlords are experienced, some are inexperienced, but how can we bridge the gap between all the skill levels?  </p>
+                    <p>At the end of the day, we learned various interviewing techniques and vocabulary to use with each target audience. And now moving forward, we have a better idea of what we can improve on for the next release.</p>
+                </div>
                 
             </div>
 
-            <!-- Add more sections as needed -->
+            
         </main>
     </div>
 
-    <!-- Include other page sections here as needed -->
+    
 
-    <!-- Footer -->
+  
     <footer>
         <p>Copyright &copy; 2023 ELVISHSIAO</p>
     </footer>
-
-    <script>
-        // Get all accordion buttons
-        var accButtons = document.querySelectorAll('.accordion-button');
-        
-        // Loop through the buttons and add the click event listener
-        accButtons.forEach(function(btn) {
-            btn.addEventListener('click', function() {
-                // Toggle between adding and removing the "active" class to highlight the button that controls the panel
-                this.classList.toggle('active');
-        
-                // Toggle between hiding and showing the active panel
-                var content = this.nextElementSibling;
-                if (content.style.maxHeight) {
-                    content.style.maxHeight = null; // Panel is open, need to close it
-                } else {
-                    content.style.maxHeight = content.scrollHeight + 'px'; // Panel is closed, need to open it
-                }
-            });
-        });
-        </script>
-
+        <script src="script.js"></script>
 </body>
 </html>

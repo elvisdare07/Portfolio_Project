@@ -27,10 +27,26 @@ header {
 }
 
 #branding h1, header h1 {
-    margin: 0;
+    margin:0;
     color: #f3f3f3;
     font-size: 24px;
     text-transform: uppercase;
+}
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 25px; /* Adjust the height as needed */
+    width: 35px; /* Adjust the width as needed */
+}
+
+.bar {
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
 nav {
@@ -39,10 +55,11 @@ nav {
 }
 
 nav ul {
+    display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
-    overflow: hidden; /* Clear floats */
+    overflow: hidden; 
 }
 
 nav ul li {
@@ -57,8 +74,59 @@ nav ul li a {
 }
 
 nav ul li a:hover,
-nav ul li a.active {
-    color: #00FF00; /* Highlight color for hover and active states */
+nav ul li a.active,
+nav ul li a:focus {
+    color: #00FF00; 
+    transition: color 0.3 ease, text-decoration 0.3s ease;
+}
+.contact-a {
+    color: #f3f3f3; 
+    transition: color 0.3s ease; 
+    
+}
+
+.contact-a:hover,
+.contact-a:focus { 
+    color: #00FF00; 
+    text-decoration: underline; 
+    outline: none; 
+}
+@media (max-width: 768px) {
+    
+    .hamburger-menu {
+        display: flex;
+       
+    }
+
+   
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding-left: 0; 
+        text-align: left; 
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    
+    nav ul li {
+        padding: 10px 0; 
+        display: block; 
+    }
+
+    nav {
+        float: none;
+        text-align: left; 
+    }
+
+   
+    nav ul li a {
+        padding-left: 20px; 
+        padding-right: 20px;
+    }
 }
 
 .container {
@@ -75,31 +143,69 @@ nav::after {
     clear: both;
 }
 /* Home Section */
-.full-page-container {
-    height: 100vh; /* 100% of the viewport height */
-    width: 100vw; /* 100% of the viewport width */
+#home .full-page-container {
     display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center; 
-    text-align: center;
-    color: white; 
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; 
+    color: #fff;
     background-color: #121212; 
+    padding: 4vw; 
 }
 
-.content h1 {
-    font-size: 4em; 
-    margin: 0;
-    padding: 0;
+#home h1 {
+    font-size: 4.5vw;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
-.intro-text {
-    font-size: 1.5em; 
-    max-width: 800px; 
-    margin-top: 20px; 
+#home .intro-text {
+    font-size: 1.6rem;
+    max-width: 60vw;
+    margin: 0 auto; 
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #home h1 {
+        font-size: 6vw; 
+    }
+
+    #home .intro-text {
+        font-size: 2vw;
+    }
+
+    
+    #home .full-page-container {
+        padding: 5vw;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    #home h1 {
+        font-size: 8vw;
+    }
+
+    #home .intro-text {
+        font-size: 3.5vw;
+    }
 }
 
 /* CAse Studies */
+.case-study-link {
+    text-decoration: none; /* Removes underline from links */
+    color: inherit; /* Ensures the text color is inherited from the parent */
+    display: block; /* Makes the link block-level for full container coverage */
+}
+
+.case-study-link:hover,
+.case-study-link:focus {
+    color: #00FF00; 
+    background-color: rgba(0, 0, 0, 0.1); 
+    outline: none; 
+}
 .section-container {
     max-width: 70%;
     margin: auto;
@@ -107,17 +213,22 @@ nav::after {
     /* border: 1px solid white; */
 }
 .case-study-grid {
-    width: calc(100%-40px);
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 50px; 
-    margin: 0;
-    /* border: 1px solid white; */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 3vw; 
+    /* align-items: left; */
+    justify-items: left;
+    margin-top: 2rem;
+}
+.case-study-grid p {
+    font-size: 1rem; 
+    line-height: 1.6;
+    margin-bottom: 1rem; /* Responsive space after the paragraph */
 }
 
 .section-title {
     color: #f3f3f3;
-    font-size: 2em;
+    font-size: 2.4rem;
     text-transform: uppercase;
     margin-bottom: 20px; 
     /* text-align: left;  */
@@ -125,7 +236,7 @@ nav::after {
 }
 
 #experience, #case-studies {
-    background-color: #000;
+    background-color: #121212;
     color: #f3f3f3;
     text-align: left;
 }
@@ -155,6 +266,35 @@ nav::after {
 }
 
 
+@media (max-width: 768px) {
+    .section-container {
+        padding: 5vh 5vw;
+    }
+
+    .section-title {
+        margin-bottom: 1.5rem;
+        font-size: 1.75rem; 
+    }
+
+    .case-study-grid {
+        grid-template-columns: 1fr; 
+        gap: 2vw;
+    }
+
+    .case-study-grid p {
+        font-size: 1em; 
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+  
+}
+
+
 /* Responsive case studies */
 @media only screen and (max-width: 600px) {
     .case-study-grid {
@@ -171,12 +311,12 @@ nav::after {
 /* Experience Section */
 .section-title {
     color: #f3f3f3; 
-    font-size: 2em; 
+    font-size: 2.4em; 
     text-transform: uppercase; 
 }
 
 #experience {
-    background-color: #000; 
+    background-color: #121212; 
     color: #f3f3f3;
     padding: 50px 20px;
     text-align: left;
@@ -228,13 +368,13 @@ nav::after {
 
 @media screen and (max-width: 768px) {
     .experience-number {
-        display: block; /* Stack number on top of the name on smaller screens */
+        display: block; 
         margin: 0 0 10px 0;
     }
 
     .experience-name {
         display: block;
-        font-size: 1.5em; /* Slightly smaller font on smaller screens */
+        font-size: 1.5em; 
     }
 }
 
@@ -253,87 +393,110 @@ footer {
 /* Work Section */
 .work-container {
     max-width: 1200px;
-    margin: 0 auto; /* Center the container */
+    margin: 0 auto; 
     color: #f3f3f3;
     background-color: #121212; 
-    padding: 2rem; /* Responsive padding */
+    padding: 2rem; 
 }
 
 /* Header within Work Container */
 .work-header {
-    border-bottom: 1px solid #444; /* Subtle border color */
-    padding-bottom: 2rem; /* Responsive padding */
+    border-bottom: 1px solid #444; 
+    padding-bottom: 2rem; 
+}
+/* Figma Embed */
+.figma-embed-container {
+    position: relative;
+    width: 100%; 
+    padding-top: 56.25%; 
+    margin-bottom: 20px; 
 }
 
+.figma-embed-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    border: none; 
+}
+iframe{
+    max-width: 100%;
+    max-height:100vh;
+}
 .work-header h1 {
-    font-size: 3rem; /* Responsive font size */
+    font-size: 3rem; 
     margin-bottom: 1rem;
 }
 
 .work-description {
-    font-size: 1.6rem; /* Slightly larger than base font size for emphasis */
-    color: #aaa; /* Light grey color for description */
+    font-size: 1.6rem; 
+    color: #aaa; 
     margin-bottom: 2rem;
 }
 
 /* Meta Information */
 .work-meta {
     display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  */
     grid-template-columns: 1fr 1fr;
-    gap: 1rem; /* Grid gap for spacing */
-    margin-bottom: 2rem; /* Bottom margin */
-    font-size: 1rem; /* Slightly larger font size */
+    gap: 1rem; 
+    margin-bottom: 2rem; 
+    font-size: 1rem; 
 }
 
 .work-meta div {
-    margin-bottom: 0.5rem; /* Margin for meta items */
+    margin-bottom: 0.5rem; 
 }
 
 /* Main content area */
 .work-main {
     display: grid;
-    grid-template-columns: 1fr; /* Single column layout */
-    gap: 2rem; /* Grid gap for spacing */
-    padding: 2rem 0; /* Vertical padding */
+    grid-template-columns: 1fr; 
+    gap: 2rem; 
+    padding: 2rem 0; 
 }
 
 .work-section {
-    margin-bottom: 2rem; /* Spacing between sections */
+    margin-bottom: 2rem; 
 }
 
 .work-section h2 {
-    font-size: 2.4rem; /* Large font size for headings */
-    margin-bottom: 1rem; /* Spacing below headings */
+    font-size: 2.4rem; 
+    margin-bottom: 1rem; 
 }
 
 .work-section p {
-    font-size: 1.6rem; /* Paragraph font size */
-    color: #ccc; /* Lighter color for paragraph text */
+    font-size: 1.6rem; 
+    color: #ccc; 
 }
 
 /* Image placeholder styles */
 .image-placeholder {
-    background-color: #333; /* Placeholder color */
-    width: 100%; /* Full width */
-    height: 30rem; 
-    margin-bottom: 2rem; /* Spacing below the image placeholder */
+    background-color: #333;
+    max-width: 100%; 
+    height: auto; 
+    margin-bottom: 2rem;
 }
+.image-placeholder img{
+    width: 100%;
+    height: auto;
+}
+
+
 /* Accordion */
-/* Style the buttons that are used to open the accordion content */
 .accordion-button {
-    background-color: #121212; /* Set background color to black */
+    background-color: #121212; 
     color: white;
     cursor: pointer;
     padding: 18px;
     width: 100%;
     border: none;
-    border-top: 1px solid #333; /* Top border line */
-    border-bottom: 1px solid #333; /* Bottom border line */
+    border-top: 1px solid #333; 
+    border-bottom: 1px solid #333; 
     text-align: left;
     outline: none;
     font-size: 18px;
-    position: relative; /* Needed for absolute positioning of the pseudo-element */
+    position: relative; 
 }
 
 
@@ -344,15 +507,15 @@ footer {
 
 .accordion-content {
     padding: 0 18px;
-    background-color: #000; /* Set background color to black */
+    background-color: #121212; 
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     color: white;
-    border-bottom: 1px solid #333; /* Bottom border line */
+    border-bottom: 1px solid #333; 
 }
 .accordion-button::after {
-    content: '\25BC'; /* Default: Downward arrow */
+    content: '\25BC'; 
     font-size: 13px;
     color: white;
     position: absolute;
@@ -372,8 +535,8 @@ footer {
 footer {
     text-align: center;
     padding: 1rem 0;
-    background-color: #222; /* Dark background for the footer */
-    color: #aaa; /* Light grey color for the footer text */
+    background-color: #121212; /* Dark background for the footer */
+    color: #aaa; 
 }
 
 /* Responsive behavior */
@@ -408,93 +571,62 @@ nav::after {
     clear: both;
 }
 
-/* Footer styles if needed */
+
 footer {
-    background-color: #333;
-    color: #f3f3f3;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    background: #1E1E1E; 
+    color: #fff; 
+    padding: 40px 20px; 
+    text-align: center; 
 }
 
-#contact-content {
-    display: flex;
-    height: 100%;
-}
-
-#contact-content-container {
-    display: flex;
-    flex-direction: column;
-    padding-left: 10%;
-}
-
-#contact-content > div {
+.footer-container {
+    max-width: 1170px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-gap: 40px; 
     justify-content: center;
+    align-items: start;
 }
 
-#footer-title {
-    font-size: 2.5vw;
-    margin: 0;
+#contact-content, #weather-api {
+    margin-bottom: 20px;
+}
+
+#contact-content h2, #weather-api p {
+    text-align: left; 
 }
 
 #contact-link-grid {
-    display: grid;
-    height: 20%;
-    padding-top: 5%;
-    height: fit-content;
-    grid-template-areas: 
-    'linkedin email'
-    'medium github';
-}
-
-.contact-links {
-    margin-right: 2%;
-    margin-bottom: 5%;
-}
-
-#linkedin-link {
-    grid-area: linkedin;
-}
-
-#email-link {
-    grid-area: email;
-}
-
-#medium-link {
-    grid-area: medium;
-}
-
-#github-link {
-    grid-area: github;
-}
-
-.contact-a {
-    font-size: 1.5vw;
-    text-decoration: none;
-    color: #C6C6C6;
-}
-
-.contact-a:hover {
-    color: white;
-}
-
-#weather-api {
     display: flex;
-    flex-direction: column;
-    text-align: right;
-    flex-grow: 1;
-    padding-right: 10%;
+    flex-direction: column; 
+    gap: 10px; 
+}
 
+.contact-links a {
+    color: #fff;
+    text-decoration: none;
+    display: block; 
 }
 
 .weather-api-text {
-    margin: 0;
-    font-size: 1.2vw;
-    margin-bottom: 0.5vh;
+    margin: 5px 0;
 }
 
-#weather-api-city {
-    font-size: 2vw;
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr; 
+    }
+
+    #contact-content h2, #weather-api p {
+        text-align: left; 
+    }
+}
+
+/* Styles for the copyright text */
+copyright-text {
+    margin-top: 40px;
+    font-size: 0.75em;
+    grid-column: 1 / -1; 
+    text-align: center;
 }

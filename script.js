@@ -1,12 +1,29 @@
-function toggleExperienceDetail(element) {
-  // This function will toggle the 'expanded' class on the parent .experience-entry
-  var experienceEntry = element.parentElement;
-  if (experienceEntry.classList.contains('expanded')) {
-    experienceEntry.classList.remove('expanded');
-  } else {
-    experienceEntry.classList.add('expanded');
-  }
+
+// Get all accordion buttons
+var accButtons = document.querySelectorAll('.accordion-button');
+
+// Loop through the buttons and add the click event listener
+accButtons.forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    // Toggle between adding and removing the "active" class to highlight the button that controls the panel
+    this.classList.toggle('active');
+
+    // Toggle between hiding and showing the active panel
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null; // Panel is open, need to close it
+    } else {
+      content.style.maxHeight = content.scrollHeight + 'px'; // Panel is closed, need to open it
+    }
+  });
+});
+
+
+function toggleHamburgerMenu() {
+  var navLinks = document.querySelector('.nav-links');
+  navLinks.classList.toggle('active');
 }
+
 $(document).ready(function () {
 
   setInterval(function () {
