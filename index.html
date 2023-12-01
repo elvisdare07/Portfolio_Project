@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elvis' Portfolio</title>
-    <link rel="stylesheet"  href="styles.css">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 </head>
 
@@ -21,13 +21,13 @@
                 <div class="bar"></div>
                 <div class="bar"></div>
             </div>
-            <nav>
+            <nav aria-label="Main Navigation">
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="#about">About</a></li> 
-                    <li><a href="#experience">Experience</a></li> 
-                    <li><a href="#case-studies">Case Studies</a></li> 
-                    <li><a href="#get-in-touch">Get In Touch</a></li> 
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#case-studies">Case Studies</a></li>
+                    <li><a href="#get-in-touch">Get In Touch</a></li>
                 </ul>
             </nav>
         </div>
@@ -43,19 +43,24 @@
                 </p>
             </div>
         </div>
-    </section> 
+    </section>
 
 
     <section id="about">
         <div class="section-container">
             <h2 class="section-title">About Me</h2>
             <div class="case-study-grid">
-                <p>Hello again! My name is Elvis and I am a product designer based out of Vancouver BC. I currently work as a UX designer at Chexy while building a few start ups on the side. I strive to create positive impact with my designs by working with clients and
-                    companies that seek to create positive social change. I am fascinated by nature and value experiences over materialistic things. Over the summer, I took a roadtrip from Vancouver, BC to Los Angeles, California and have fallen in love with the idea of travelling. So if you know any cool places I should explore, please reach out!</p>
-                    <div class="image-placeholder">
-                        <img src="profile/8uJdA8_g_400x400.jpg" alt="Sign up page with single sign on option with google">
-                    </div>   
-                      
+                <p>Hello again! My name is Elvis and I am a product designer based out of Vancouver BC. I currently work
+                    as a UX designer at Chexy while building a few start ups on the side. I strive to create positive
+                    impact with my designs by working with clients and
+                    companies that seek to create positive social change. I am fascinated by nature and value
+                    experiences over materialistic things. Over the summer, I took a roadtrip from Vancouver, BC to Los
+                    Angeles, California and have fallen in love with the idea of travelling. So if you know any cool
+                    places I should explore, please reach out!</p>
+                <div class="image-placeholder">
+                    <img src="profile/8uJdA8_g_400x400.jpg" alt="Picture of a man in black hoodie and hat, sitting on a chair looking to the left">
+                </div>
+
             </div>
         </div>
 
@@ -65,26 +70,33 @@
             <h2 class="section-title">Get In Touch</h2>
             <div class="case-study-grid">
                 <div id="weather-api">
-                    <p class="weather-api-text" id="weather-api-city"><b>Vancouver, BC</b></p>
-                    <p class="weather-api-text" id="date-time">Sat, May 13th 2023</p>
-                    <p class="weather-api-text" id="date-hour">11:39:55 pm </p>
+                    <p class="weather-api-text" id="weather-api-city"><strong>Vancouver, BC</strong></p>
+                    <time class="weather-api-text" id="date-time" datetime="2023-05-13">Sat, May 13th 2023</time>
+                    <time class="weather-api-text" id="date-hour" datetime="23:39:55">11:39:55 pm</time>
                     <p class="weather-api-text" id="weather">Sunny, 18.8 C</p>
+
                 </div>
                 <div id="contact-info">
-                <div class="contact-links" id="linkedin-link">
-                    <a href="https://www.linkedin.com/in/elvishh/" target="_blank" class="contact-a">Linkedin</a>
+                    <div class="contact-links" id="linkedin-link">
+                        <a href="https://www.linkedin.com/in/elvishh/" target="_blank"
+                            aria-label="Visit my LinkedIn profile (opens in new tab) " class="contact-a">Linkedin</a>
+                    </div>
+                    <div class="contact-links" id="email-link">
+                        <a href="mailto:elvish@sfu.ca" target="_blank" aria-label="Send me an email (opens in new tab) "
+                            class="contact-a">Email</a>
+                    </div>
+                    <div class="contact-links" id="medium-link">
+                        <a href="https://medium.com/@elvishh" target="_blank"
+                            aria-label="Visit my Medium Blog page where I publish design content (opens in new tab) "
+                            class="contact-a">Medium</a>
+                    </div>
+                    <div class="contact-links" id="github-link">
+                        <a href="https://github.com/elvisdare07" target="_blank"
+                            aria-label="Visit my Github Page to see my latest coding projects (opens in new tab) "
+                            class="contact-a">Github</a>
+                    </div>
                 </div>
-                <div class="contact-links" id="email-link">
-                    <a href="mailto:elvish@sfu.ca" target="_blank" class="contact-a">Email</a>
-                </div>
-                <div class="contact-links" id="medium-link">
-                    <a href="https://medium.com/@elvishh" target="_blank" class="contact-a">Medium</a>
-                </div>
-                <div class="contact-links" id="github-link">
-                    <a href="https://github.com/elvisdare07" target="_blank" class="contact-a">Github</a>
-                </div>
-                </div>
-                      
+
             </div>
         </div>
 
@@ -94,42 +106,58 @@
         <div class="experience-container">
             <h2 class="section-title">Experience</h2>
             <div class="accordion-item">
-                <button class="accordion-button">01. Chexy</button>
+                <button class="accordion-button" aria-expanded="false">01. Chexy</button>
                 <div class="accordion-content">
                     <p>Position: UX Designer</p>
                     <p>Duration: August 2022 - January 2022 | August 2023 - Present</p>
-                    <p>About the company: Chexy is a platform that allows tenants to earn rewards and build credit through rent payments. They allow users to build credit without having to take on additional debt. </p>
-                    <p>My role as a UX Designer is to work closely with the engineers and the chief of product to insure that designs suit the needs of our target audience. On a day to day basis, I'm in charge of designing new features and creating new userflows, while also identifying areas of friction within the current product.</p>
+                    <p>About the company: Chexy is a platform that allows tenants to earn rewards and build credit
+                        through rent payments. They allow users to build credit without having to take on additional
+                        debt. </p>
+                    <p>My role as a UX Designer is to work closely with the engineers and the chief of product to insure
+                        that designs suit the needs of our target audience. On a day to day basis, I'm in charge of
+                        designing new features and creating new userflows, while also identifying areas of friction
+                        within the current product.</p>
                 </div>
             </div>
             <div class="accordion-item">
-                <button class="accordion-button">02. Pondr</button>
+                <button class="accordion-button" aria-expanded="false">02. Pondr</button>
                 <div class="accordion-content">
                     <p>Position: Founding Designer</p>
-                    <p>About the company: Pondr is an automated bookmark reminder web extension. Whenever you Pondr a tab, you would be reminded to visit your tab based on your availability on Google Calendar. </p>
-                    <p>My role as a founding designer is to be involved with the co-founders and insure that design decisions align with business goals. </p>
+                    <p>About the company: Pondr is an automated bookmark reminder web extension. Whenever you Pondr a
+                        tab, you would be reminded to visit your tab based on your availability on Google Calendar. </p>
+                    <p>My role as a founding designer is to be involved with the co-founders and insure that design
+                        decisions align with business goals. </p>
                 </div>
-            </div><div class="accordion-item">
-                <button class="accordion-button">03. UX Collective</button>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-button" aria-expanded="false">03. UX Collective</button>
                 <div class="accordion-content">
                     <p>Position: Design Writer</p>
                     <p>Duration: December 2022 - Present</p>
-                    <p>About the company: UX Collective an independent design publication built to elevate unheard design voices all over the world. They are currently the largest design publication on Medium with over 450K followers.</p>
+                    <p>About the company: UX Collective an independent design publication built to elevate unheard
+                        design voices all over the world. They are currently the largest design publication on Medium
+                        with over 450K followers.</p>
                 </div>
-            </div><div class="accordion-item">
-                <button class="accordion-button">04. Hitachi Energy</button>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-button" aria-expanded="false">04. Hitachi Energy</button>
                 <div class="accordion-content">
                     <p>Position: UX Designer</p>
                     <p>Duration: January 2023 - July 2023</p>
-                    <p>About the company: Hitachi Energy is a global technology company that provides sustainable energy solutions to buildings, utilities, industries, and infrasturcture sectors. Their parent company Hitachi, is a Japanese Multinational Conglomerate that is on the fortune 500 list of companies.</p>
+                    <p>About the company: Hitachi Energy is a global technology company that provides sustainable energy
+                        solutions to buildings, utilities, industries, and infrasturcture sectors. Their parent company
+                        Hitachi, is a Japanese Multinational Conglomerate that is on the fortune 500 list of companies.
+                    </p>
                     <p>During my time at Hitachi Energy, I worked within the Lumada team (NDA). </p>
                 </div>
-            </div><div class="accordion-item">
-                <button class="accordion-button">05. Troop</button>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-button" aria-expanded="false">05. Troop</button>
                 <div class="accordion-content">
                     <p>Position: UX Design Intern</p>
                     <p>Duration: January 2022 - March 2022</p>
-                    <p>About the company: A social impact tool that brings together needs from local charities to help businesses do corporate social responsibility differently.</p>
+                    <p>About the company: A social impact tool that brings together needs from local charities to help
+                        businesses do corporate social responsibility differently.</p>
                     <p>During my time at Troop, I worked on designing the dashboard. </p>
                 </div>
             </div>
@@ -142,21 +170,22 @@
             <h2 class="section-title">Case Studies</h2>
             <div class="case-study-grid">
                 <a href="work.html" class="case-study-link">
-                <div class="case-study">
-                    <img src="Chexy-featured.jpg" alt="Case Study 1">
-                    <h3>Chexy - Landlord Facing Platform</h3>
-                    <p>Creating a landlord centric platform that allows landlords to seamlessly manage their properties and collect payments.</p>
-                </div>
+                    <div class="case-study">
+                        <img src="Chexy-featured.jpg" alt="Overview of Chexy Landlord Facing Platform Interface">
+                        <h3>Chexy - Landlord Facing Platform</h3>
+                        <p>Creating a landlord centric platform that allows landlords to seamlessly manage their
+                            properties and collect payments.</p>
+                    </div>
                 </a>
             </div>
         </div>
     </section>
 
     <footer>
-       
+
         <p>Copyright &copy; 2023 ELVISHSIAO</p>
     </footer>
-    
+
     <script src="script.js"></script>
 </body>
 

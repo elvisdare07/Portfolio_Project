@@ -1,0 +1,10 @@
+Fonts: https://www.thedesignersfoundry.com/tomato-grotesk
+Sites: https://www.hitachienergy.com/ca/en
+https://hitroop.com/
+https://www.pondr.app/
+https://uxdesign.cc/
+https://www.w3schools.com/
+https://codepen.io/trending
+https://chat.openai.com/ ChatGPT was used specifically for help with integrating the Weather API, as well as Figma Embedding. Primarily used for debugging console error messages. 
+https://help.figma.com/hc/en-us/articles/360039827134-Embed-files-and-prototypes
+https://openweathermap.org/api
